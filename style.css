@@ -1,0 +1,554 @@
+/*
+
+import fonts
+
+*/
+
+@import url("https://use.typekit.net/lal3cxi.css");
+@import url('https://fonts.googleapis.com/css?family=Cairo:900&display=swap');
+
+/*
+
+color palette
+
+*/
+.color{
+  --color1: black;
+  --color2: white;
+  --color3: #333;
+  --color4: #1c59ba;
+}
+
+/*
+
+general
+
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  font-family: termina,sans-serif;
+  color: var(--color1);
+  background-color: var(--color2);
+	font-size: 14px;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+
+navigation side
+
+*/
+.nav_side{
+    z-index: 998;
+    position: fixed;
+    height: auto;
+    transition-duration: 200ms;
+	  transition-timing-function: ease-out;
+}
+
+.nav_section{
+  float: right;
+    text-align: right;
+    color: var(--color1);
+    opacity: 0.5;
+    font-family: termina,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    transition-duration: 200ms;
+	  transition-timing-function: ease-out;
+}
+
+.nav_selected {
+    text-decoration: none;
+    color: var(--color4);
+    opacity: 1;
+    transition-duration: 500ms;
+	  transition-timing-function: ease-in-out;
+}
+
+
+
+/*
+
+social side
+
+*/
+.social_side {
+pointer-events: auto;
+  z-index: 998;
+  position: fixed;
+  height: auto;
+  left: 5%;
+  text-align: right;
+}
+
+.social_icon {
+  margin: 0.2em 0.2em 0 auto;
+  width: 1.4em;
+  text-align: center;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+.social_link {
+  color: var(--color1);
+  opacity: 0.3;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+.social_link:hover {
+  opacity: 1;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+
+/*
+
+segments
+
+*/
+.segments {
+    overflow:hidden;
+    width: 100vw;
+    height: auto;
+    position: relative;
+}
+
+.section{
+    text-align: left;
+}
+
+/*
+
+About me
+
+*/
+
+.greetings{
+    position: relative;
+    color: var(--color4);
+    font-family: termina,sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: left;
+    margin: 0;
+}
+
+.about_div {
+    position: relative;
+    float: left;
+    height: auto;
+}
+
+.about_me {
+    margin: 0;
+    position: relative;
+    line-height: normal;
+	  font-family: termina,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    color: var(--color1);
+}
+
+
+@media screen and (min-width: 1023px) {
+
+
+  .nav_text:hover {
+      color: var(--color4);
+      opacity: 1;
+      transition-duration: 200ms;
+  	  transition-timing-function: ease-out;
+  }
+
+  /*
+
+  segments
+
+  */
+  #slide1{
+    height: 100vh;
+    margin-bottom: 0;
+  }
+
+  #slide6{
+    height: 100vh;
+    margin-bottom: 0;
+  }
+  .segments{
+    margin-bottom: 20vh;
+  }
+  .section {
+    padding-left: 15vw;
+    padding-right: 10vw;
+    font-size: 2.4vw;
+  }
+
+  .greetings, .contact {
+    font-size: 6vmax;
+  }
+  .year {
+    font-size: 1.3vw;
+    margin-bottom: -0.5vh;
+  }
+
+  .school{
+    font-size: 2vw;
+  }
+
+  .degree {
+    font-size: 1.5vw;
+    margin-top: -1vw;
+  }
+
+  .social_icon {
+    font-size: 2.5vh;
+  }
+
+  .tasks {
+    margin-top: -1vw;
+    font-size: 1.4vw;
+  }
+
+  .skill_category {
+    font-size: 2vw;
+  }
+
+  .skills{
+    font-size: 1.5vw;
+    margin-top: -1vh;
+  }
+
+  .award {
+    font-size: 1.5vw;
+  }
+
+  .award_year {
+    font-size: 1.3vw;
+    margin-bottom: -0.4vh;
+  }
+
+
+  .award {
+    width: 70vw;
+  }
+
+  .social_side{
+    width: 5em;
+    bottom: 5%;
+  }
+
+  .nav_side{
+    width: 5em;
+    top: 8%;
+    left: 5%;
+    font-size: 1.7vmin;
+  }
+
+  .about_div{
+    width: 50%;
+    padding-right: 1vw;
+    font-size: 2vmin;
+  }
+
+  .reach {
+    font-size: 3vh;
+  }
+
+  .social_side_footer .social_icon {
+    font-size: 3.2vh;
+  }
+}
+
+
+/*
+
+For mobile devices
+
+*/
+@media screen and (max-width: 1023px) {
+
+
+  #slide1{
+    height: 100vh;
+    margin-bottom: 0;
+  }
+
+  #slide6{
+    height: 50vh;
+  }
+
+  .about_div{
+    width: 100%;
+    padding-right: 0;
+    font-size: 3.5vmin;
+  }
+
+  .greetings, .contact{
+        font-size: 5vmax;
+  }
+
+  .segments{
+      margin-bottom: 10vh;
+  }
+
+  .section{
+    padding-left: 20vw;
+    padding-right: 10vw;
+    font-size: 4vw;
+  }
+
+  .header{
+    font-size: 6vw;
+  }
+
+  .nav_side{
+    -ms-transform: rotate(180deg); /* IE 9 */
+    transform: rotate(180deg); /* Standard syntax */
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    float: right;
+    width: 2em;
+    top: 3%;
+    left: 3%;
+    font-size: 0.7rem;
+  }
+
+  .social_side{
+    width: 2em;
+    bottom: 3%;
+    left: 3%;
+  }
+
+  .social_icon {
+    font-size: 2vh;
+  }
+
+  .year {
+    font-size: 2.5vw;
+    margin-bottom: 1vh;
+  }
+
+  .school{
+    font-size: 3.5vw;
+  }
+
+  .degree {
+    font-size: 3vw;
+    margin-top: -2vw;
+  }
+
+  .tasks {
+    margin-top: -2vw;
+    font-size: 2.6vw;
+  }
+
+  .skill_category {
+    font-size: 3vw;
+    margin-bottom: -0.2vh;
+  }
+
+  .skills{
+    font-size: 2.5vw;
+  }
+
+  .award {
+    font-size: 2.5vw;
+  }
+
+  .award_year {
+    font-size: 2.5vw;
+    margin-bottom: -0.2vh;
+  }
+
+  .award_container {
+    height: 12vw;
+  }
+
+  .award {
+    width: 70vw;
+  }
+
+  .reach {
+    font-size: 2vh;
+  }
+
+  .social_side_footer .social_icon {
+    font-size: 2.6vh;
+  }
+}
+
+.header{
+    position: relative;
+    color: var(--color1);
+    margin: 0px;
+    font-family: termina,sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-align: left;
+}
+
+.education{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.year {
+    color: var(--color4);
+    font-family: termina,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: left;
+    width: auto;
+    height: 2vw;
+}
+
+.school{
+    color: var(--color1);
+    font-family: termina,sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    position: relative;
+    width: auto;
+    height: auto;
+    text-align: left;
+    transition-duration: 200ms;
+	transition-timing-function: ease-out;
+}
+
+.degree {
+    margin-top: -2vh;
+    position: relative;
+    color: var(--color1);
+    font-family: termina,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+}
+
+.skill_container {
+    position: relative;
+    margin-top: 2vw;
+}
+
+.skill_category {
+	  font-family: termina,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
+    color: var(--color1);
+}
+
+.skills{
+    font-family: termina,sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    color: var(--color4);
+}
+
+.award_container {
+	position: relative;
+    margin-top: 1vw;
+}
+
+.award {
+    color: var(--color1);
+	font-family: termina,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
+}
+
+.award_year {
+	color: var(--color4);
+    font-family: termina,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: left;
+}
+
+.link_icon{
+  font-size: 1vw;
+  position: absolute;
+  top: 0.3vh;
+}
+
+.tasks {
+  font-weight: 300;
+}
+
+.link:hover {
+  color: var(--color4);
+}
+
+.social_left{
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+.social_appear{
+  opacity: 1;
+  pointer-events: auto;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+.social_side_footer {
+  margin-top: -1.5vh;
+  z-index: 998;
+  height: auto;
+  text-align: left;
+}
+
+.social_side_footer .social_icon {
+  z-index: 998;
+  margin: 0.5em 0.5em 0 auto;
+  width: auto;
+  float: left;
+  text-align: center;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+.reach {
+  font-weight: 500;
+  margin-bottom: 4vh;
+  color: var(--color4);
+}
+
+.contact{
+  position: relative;
+  color: var(--color1);
+  font-family: termina,sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-align: left;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow: hidden;
+
+}
