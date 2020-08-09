@@ -55,8 +55,6 @@ navigation side
     z-index: 998;
     position: fixed;
     height: auto;
-    transition-duration: 200ms;
-	  transition-timing-function: ease-out;
 }
 
 .nav_section{
@@ -257,13 +255,13 @@ About me
     width: 5em;
     top: 8%;
     left: 5%;
-    font-size: 1.7vmin;
+    font-size: 1vw;
   }
 
   .about_div{
     width: 50%;
     padding-right: 1vw;
-    font-size: 2vmin;
+    font-size: 1.2vw;
   }
 
   .reach {
@@ -271,7 +269,7 @@ About me
   }
 
   .social_side_footer .social_icon {
-    font-size: 3.2vh;
+    font-size: 2vw;
   }
 }
 
