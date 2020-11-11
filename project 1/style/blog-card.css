@@ -1,0 +1,138 @@
+/*
+
+created by: Najla Albaz
+
+*/
+
+.blog-card {
+    background-color: #111;
+    border-radius: 1.5rem 0.2rem;
+    border: #111 0.4rem solid;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-rows: 50% 10% 1fr 10%;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: 
+    "img img"
+    "date author"
+    "title title"
+    "click click"
+    ;
+}
+
+#layout-blog a {
+    justify-self: stretch;
+    align-self: stretch; 
+}
+
+.blog-card:hover {
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
+    border: #C9F 0.4rem solid;
+}
+
+.card-img {
+    grid-area: img;
+    overflow: hidden;
+    border-radius: 0 0 2em 2em;
+    margin-bottom: 0.5rem;
+    display: flex;
+}
+
+.card-img img {
+    max-width: 100%;
+}
+
+.card-date {
+    grid-area: date;
+    justify-self: start;
+    color: #c9f;
+    font-size: 1vw;
+}
+
+.card-author {
+    grid-area: author;
+    justify-self: end;
+    color: #c9f;
+    font-size: 1vw;
+}
+
+.white-text {
+    color: white;
+}
+
+.card-title {
+    grid-area: title;
+    justify-self: start;
+    align-self: start;
+    font-size: 1.5em;
+}
+
+.more-text {
+    font-size: 0.8em;
+    color: #666;
+    grid-area: click;
+    align-self: end;
+    justify-self: center;
+    padding-bottom: 0.4em;
+}
+
+
+@media (max-width: 1200px) and (min-width: 800px){
+
+    .more-text {
+        font-size: 0.8em;
+        color: #666;
+        grid-area: click;
+        align-self: end;
+        justify-self: center;
+        padding-bottom: 0.4em;
+    }
+
+    .card-title {
+        font-size: 1em;
+    }
+    
+    .card-date {
+        font-size: 0.55em;
+    }
+
+    .card-author {
+        font-size: 0.55em;
+    }
+}
+
+@media (max-width: 799px) and (min-width: 501px) {
+
+    .card-date {
+        font-size: 0.8em;
+    }
+
+    .card-author {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .more-text {
+        font-size: 0.6em;
+        color: #666;
+        grid-area: click;
+        align-self: end;
+        justify-self: center;
+        padding-bottom: 0.2em;
+    }
+
+    .card-date {
+        font-size: 0.55em;
+    }
+
+    .card-author {
+        font-size: 0.55em;
+    }
+
+    .card-title {
+        font-size: 0.8em;
+    }
+}

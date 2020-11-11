@@ -1,0 +1,464 @@
+/*
+
+created by: Najla Albaz
+
+*/
+
+.blog-body {
+    background-color: #fff;
+    color: #111;
+}
+
+.blog-nav {
+    display: grid;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 10%;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-areas:
+    ". home logo ."
+    ;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.home-button {
+    grid-area: home;
+    justify-self: start;
+    align-self: center;
+    display: flex;
+    justify-items: self-start;
+    align-items: center;
+}
+
+.home-button:hover {
+    color: #c6f;
+}
+
+.home-button img {
+    width: 1.5em;
+}
+
+.home-button h2 {
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+#post-nav-logo {
+    align-self: center;
+    justify-self: end;
+    grid-area: logo;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #666 !important;
+}
+
+.post-layout {
+    display: grid;
+    grid-template-rows: 10% minmax(10vh, auto) auto 15vh 10vh;
+    grid-template-columns: 10% 50% 5% 25% 10%;
+    grid-template-areas:
+    ". . . . ."
+    ". head . info ."
+    ". content . author ."
+    ". post post post ."
+    "footer footer footer footer footer"
+    ;
+}
+
+.post-header {
+    grid-area: head;
+
+}
+
+.post-header h2 {
+    color: #c6f;
+    font-size: 3em;
+}
+
+.post-info {
+    grid-area: info;
+    justify-self: end;
+    text-align: right;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.post-content {
+    grid-area: content;
+}
+
+.content-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.content-img img {
+    max-width: 80%;
+    border-radius: 10px;
+    display: block;
+}
+
+.content-img figcaption {
+    max-width: 80%;
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #666 !important;
+    text-align: center;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.post-content p {
+    color: #111;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+}
+
+.layout-author {
+    grid-area: author;
+}
+
+.author-card {
+    width: 100%;
+    border-radius: 10px 30px;
+    background-color: #111;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto 1fr ;
+    grid-template-areas:
+    "avatar social"
+    "name name"
+    "position position"
+    "company company"
+    "brief brief"
+    ;
+    padding: 10% 10%;
+}
+
+.avatar {
+    grid-area: avatar;
+    background-color: #fff;
+    width: 9vw;
+    height: 9vw;
+    border-radius: 10px;
+}
+
+.social-media {
+    grid-area: social;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.social-media img {
+    width: 2vw;
+}
+
+.author-name {
+    grid-area: name;
+    font-size: 2em;
+    padding-top: 0.5em;
+}
+
+.author-position {
+    grid-area: position;
+    color: #c6f;
+    font-size: 1em;
+}
+
+.author-company {
+    grid-area: company;
+    color: #c6f;
+    font-size: 0.8em;
+}
+
+.author-brief {
+    grid-area: brief;
+    height: auto;
+    padding-top: 0.5em;
+}
+
+.next-prev-post {
+    grid-area: post;
+    display: grid;
+    align-self: center;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    "prev next"
+    ;
+    color: #c6f;
+}
+
+.next-prev-post a:hover {
+    color: black;
+}
+
+.prev {
+    grid-area: prev;
+    justify-self: left;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.next {
+    grid-area: next;
+    justify-self: right;
+    align-self: center;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.next img {
+    transform: rotate(180deg);
+}
+
+.next-prev-post img {
+    width: 1.5em;
+}
+
+.next-prev-post h2 {
+    font-size: 1.2em;
+    margin: 0 10px;
+}
+
+@media (max-width: 799px) and (min-width: 501px) {
+    
+    .post-layout {
+        display: grid;
+        grid-template-rows: 10vh minmax(5vh, auto) auto auto auto 15vh 10vh;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-areas:
+        ". .  ."
+        ". head ."
+        ". info ."
+        ". content ."
+        ". author ."
+        ". post ."
+        "footer footer footer"
+        ;
+    }
+
+    .post-info {
+        grid-area: info;
+        justify-self: stretch;
+        align-self: stretch;
+        text-align: right;
+        font-size: 0.8em;
+        color: #666;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1.5em;
+    }
+
+    .author-card {
+        width: 100%;
+        border-radius: 10px 30px;
+        background-color: #111;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto 1fr ;
+        grid-template-areas:
+        "avatar social"
+        "name name"
+        "position position"
+        "company company"
+        "brief brief"
+        ;
+        padding: 5% 5%;
+    }
+
+    .social-media {
+        grid-area: social;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: flex-start;
+    }
+    
+    .social-media img {
+        width: 3vw;
+        margin: 0 1em;
+    }
+
+    .avatar {
+        grid-area: avatar;
+        background-color: #fff;
+        width: 15vw;
+        height: 15vw;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .home-button h2 {
+        font-size: 1em;
+        margin-left: 10px;
+    }
+
+    .post-layout {
+        display: grid;
+        grid-template-rows: 10vh minmax(5vh, auto) auto auto auto 20vh 10vh;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-areas:
+        ". .  ."
+        ". head ."
+        ". info ."
+        ". content ."
+        ". author ."
+        ". post ."
+        "footer footer footer"
+        ;
+    }
+
+    .post-header h2 {
+        color: #c6f;
+        font-size: 2em;
+    }
+
+    .post-info {
+        grid-area: info;
+        justify-self: stretch;
+        align-self: stretch;
+        text-align: right;
+        font-size: 0.6em;
+        color: #666;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1.5em;
+        margin-top: 0.5em;
+    }
+
+    .post-content p {
+        color: #111;
+        overflow: hidden;
+        max-width: 100%;
+        margin-bottom: 1em;
+        font-size: 1em;
+    }
+
+    .author-card {
+        width: 100%;
+        border-radius: 10px 30px;
+        background-color: #111;
+        color: #fff;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto auto 1fr ;
+        grid-template-areas:
+        "avatar social"
+        "name name"
+        "position position"
+        "company company"
+        "brief brief"
+        ;
+        padding: 10% 10%;
+        margin-top: 1em;
+    }
+
+    .author-name {
+        grid-area: name;
+        font-size: 1.5em;
+        padding-top: 0.5em;
+    }
+
+    .social-media {
+        grid-area: social;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+    
+    .social-media img {
+        width: 5vw;
+        margin: 0 0.5em;
+    }
+
+    .avatar {
+        grid-area: avatar;
+        background-color: #fff;
+        width: 30vw;
+        height: 30vw;
+        border-radius: 10px;
+    }
+
+    .content-img img {
+        max-width: 90%;
+        border-radius: 10px;
+        display: block;
+    }
+
+    .next-prev-post {
+        grid-area: post;
+        display: grid;
+        align-self: center;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+        "prev"
+        "next"
+        ;
+        color: #c6f;
+    }
+    
+    .next-prev-post a:hover {
+        color: black;
+    }
+    
+    .prev {
+        grid-area: prev;
+        justify-self: left;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: stretch;
+    }
+    
+    .next {
+        grid-area: next;
+        justify-self: right;
+        align-self: center;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        align-content: stretch;
+    }
+    
+    .next img {
+        transform: rotate(180deg);
+    }
+    
+    .next-prev-post img {
+        width: 1.5em;
+    }
+    
+    .next-prev-post h2 {
+        font-size: 1em;
+        margin: 0 10px;
+    }
+}

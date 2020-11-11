@@ -1,0 +1,64 @@
+/*
+
+created by: Najla Albaz
+
+*/
+
+.rights-text {
+    grid-area: rights;
+    align-self: center;
+    justify-self: start;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.7em;
+    color: #666;
+}
+
+.footer-logo {
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+    font-size: 1em;
+    color: #666 !important;
+}
+
+.create-text {
+    grid-area: create;
+    align-self: center;
+    justify-self: end;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.7em;
+    color: #666;
+    text-align: right;
+}
+
+.purple {
+    color: #c6f;
+    font-weight: 800;
+}
+
+
+@media (max-width: 1200px) and (min-width: 800px){
+    .rights-text {
+        font-size: 0.7em;
+    }
+    
+    .create-text {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .rights-text {
+        font-size: 0.2em;
+    }
+    
+    .create-text {
+        text-align: right;
+        font-size: 0.2em;
+    }
+}
