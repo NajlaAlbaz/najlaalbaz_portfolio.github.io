@@ -95,7 +95,7 @@ pointer-events: auto;
 
 .social_icon {
   margin: 0.2em 0.2em 0 auto;
-  width: 1.4em;
+  width: 1em;
   text-align: center;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
@@ -522,7 +522,7 @@ For mobile devices
 .social_side_footer .social_icon {
   z-index: 998;
   margin: 0.5em 0.5em 0 auto;
-  width: auto;
+  width: 1em;
   float: left;
   text-align: center;
   transition-duration: 200ms;
@@ -548,5 +548,4 @@ For mobile devices
   -ms-hyphens: auto;
   hyphens: auto;
   overflow: hidden;
-
 }
