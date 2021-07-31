@@ -314,6 +314,10 @@ For mobile devices
   .header{
     font-size: 6vw;
   }
+	
+.header1{
+    font-size: 4.5vw;
+  }
 
   .nav_side{
     -ms-transform: rotate(180deg); /* IE 9 */
