@@ -405,6 +405,18 @@ For mobile devices
     text-align: left;
 }
 
+
+.header1{
+    position: relative;
+    color: var(--color1);
+    margin: 0px;
+    font-family: termina,sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    text-align: left;
+	font-size: 2.2vw;
+}
+
 .education{
     margin-top: 2vw;
     margin-bottom: 2vw;
